@@ -1,189 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="mainstyle.css">
-    <title>Supriyanka Budhathoki- portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Huntgate - Organizations</title>
+  <link rel="stylesheet" href="mainstyle.css" />
 </head>
 <body>
-
-
-    <!--Header section code-->
-
-    <header class="header">
-        <a href="#home" class="logo">Supriyanka Budhathoki</a>
-       
-        <i class='bx bx-menu' id="menu-icon"></i>
-
-        <nav class="navbar">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#testimonial">Testimonial</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-    <section class="home" id="home">
-        <div class="home-img">
-            <img src="Assets/images/profile2.jpg" alt="profile Image">
+  <div class="dashboard-layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">TH</div>
+        <div>
+          <p class="brand-title">THE HUNTGATE</p>
+          <p class="brand-subtitle">Admin Console</p>
         </div>
-        <div class="home-content">
-            <h3>Hello, Myself</h3>
-            <h1>Supriyanka Budhathoki</h1>
-            <h3>And I'm a <span class="multiple-text"></span></h3>
-            <p><b><i>passionate web developer dedicated to creating modern, responsive, and functional websites. Whether you need a stunning design or optimized performance, I've got you covered. Check out my portfolio and let's build something amazing together!"</i></b></p>
-           
-           
-            <div class="social-media">
-                <a href="#"><i class='bx bxl-linkedin'></i> </a>
-                <a href="#"><i class='bx bxl-github'></i> </a>
-                <a href="#"><i class='bx bxl-facebook-circle'></i> </a>
-                <a href="#"><i class='bx bxl-instagram-alt' ></i> </a>
-            </div>
-            <a href="#" class="btn">Download CV</a>
+      </div>
+
+      <nav class="sidebar-nav" aria-label="Sidebar Navigation">
+        <a href="#" class="nav-item"><span class="nav-icon">⌂</span>Dashboard</a>
+        <a href="#" class="nav-item active"><span class="nav-icon">🏢</span>Organizations</a>
+        <a href="#" class="nav-item"><span class="nav-icon">👥</span>Members</a>
+        <a href="#" class="nav-item"><span class="nav-icon">🏇</span>Riders</a>
+        <a href="#" class="nav-item"><span class="nav-icon">📅</span>Events</a>
+        <a href="#" class="nav-item"><span class="nav-icon">💬</span>Communication</a>
+        <a href="#" class="nav-item"><span class="nav-icon">🔄</span>Work Flow</a>
+        <a href="#" class="nav-item"><span class="nav-icon">✔</span>Compliance</a>
+        <a href="#" class="nav-item"><span class="nav-icon">🖼</span>Media</a>
+        <a href="#" class="nav-item"><span class="nav-icon">📰</span>News</a>
+        <a href="#" class="nav-item"><span class="nav-icon">🎯</span>Fundraising</a>
+        <a href="#" class="nav-item"><span class="nav-icon">🛍</span>Merchandise</a>
+        <a href="#" class="nav-item"><span class="nav-icon">€</span>Finance</a>
+        <a href="#" class="nav-item"><span class="nav-icon">📊</span>Reports</a>
+        <a href="#" class="nav-item"><span class="nav-icon">🧾</span>Accountancy</a>
+        <a href="#" class="nav-item"><span class="nav-icon">⚙</span>Settings</a>
+      </nav>
+
+      <button class="logout-btn" type="button">↪ Logout</button>
+    </aside>
+
+    <main class="main-content">
+      <header class="page-header">
+        <div>
+          <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">☰</button>
+          <p class="breadcrumb">Organization Management &gt; <strong>Organizations</strong></p>
+          <h1>Organizations</h1>
         </div>
-    </section>
+        <section class="profile" aria-label="User Profile">
+          <div>
+            <p class="profile-name">Ava Jones</p>
+            <p class="profile-role">Super Admin</p>
+          </div>
+          <div class="profile-avatar" aria-hidden="true">AJ</div>
+        </section>
+      </header>
 
-
-    <!--about section code-->
-
-    <section class="about" id="about">
-        <div class="about-content">
-            <h2 class="heading">About <span>  Me</span></h2>
-            <h3>I'm a <span> Frontend Developer</span> </h3>
-            <p><b>"Hi! I'm supriyanka budhathoki, a budding web developer with a love for turning ideas into beautiful and functional websites.
-                From a biology student who was totally book oriented to the students who is totally web oriented is such a amazing journey.
-                I love combining the worlds of logics and creative design to make the eye-catching, accessible and user-friendly websites and applications.</b>
-<br>
-              <b>  Technology leads and society follows.i'm excited to make the leap and continue refining my skills with the right company."</b></p>
-            <br><br>
-            <a href="#" class="btn">Read More</a>
+      <section class="toolbar" aria-label="Filters and Actions">
+        <div class="search-group">
+          <label for="searchInput" class="visually-hidden">Search organizations</label>
+          <input id="searchInput" type="search" placeholder="Search organizations..." />
+          <button type="button" id="filterBtn">Filter</button>
         </div>
-        <div class="about-img">
-            <img src="Assets/images/aboutme.jpg" alt="About Image">
+        <button class="create-btn" type="button">+ Create Organization</button>
+      </section>
+
+      <section class="metrics" aria-label="Organization Metrics">
+        <article class="metric-card">
+          <h2>Total Organizations</h2>
+          <p class="metric-value">12</p>
+          <p class="metric-trend positive">▲ +12.5%</p>
+        </article>
+        <article class="metric-card">
+          <h2>Active Organizations</h2>
+          <p class="metric-value">10</p>
+          <p class="metric-trend positive">▲ +1.5%</p>
+        </article>
+        <article class="metric-card">
+          <h2>Total Sales</h2>
+          <p class="metric-value">€412,850</p>
+          <p class="metric-trend negative">▼ -12.5%</p>
+        </article>
+        <article class="metric-card">
+          <h2>Total Revenue</h2>
+          <p class="metric-value">€392,850</p>
+          <p class="metric-trend negative">▼ -10.5%</p>
+        </article>
+      </section>
+
+      <section class="table-panel" aria-label="Organizations Table">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Organization</th>
+                <th>Members</th>
+                <th>Events</th>
+                <th>Sales</th>
+                <th>Revenue</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="organizationTableBody">
+              <tr>
+                <td>Horse Racing Ireland</td>
+                <td>124</td>
+                <td>18</td>
+                <td>€72,400</td>
+                <td>€68,900</td>
+                <td><span class="status-badge">live</span></td>
+                <td>
+                  <button class="action-trigger" type="button" aria-label="Open action menu">⋯</button>
+                  <ul class="action-menu" aria-label="Row actions">
+                    <li><button type="button">View</button></li>
+                    <li><button type="button">Edit</button></li>
+                    <li><button type="button">Archive</button></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>Horse Racing Ireland</td>
+                <td>98</td>
+                <td>14</td>
+                <td>€65,300</td>
+                <td>€60,700</td>
+                <td><span class="status-badge">live</span></td>
+                <td>
+                  <button class="action-trigger" type="button" aria-label="Open action menu">⋯</button>
+                  <ul class="action-menu" aria-label="Row actions">
+                    <li><button type="button">View</button></li>
+                    <li><button type="button">Edit</button></li>
+                    <li><button type="button">Archive</button></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>Horse Racing Ireland</td>
+                <td>83</td>
+                <td>11</td>
+                <td>€57,800</td>
+                <td>€53,640</td>
+                <td><span class="status-badge">live</span></td>
+                <td>
+                  <button class="action-trigger" type="button" aria-label="Open action menu">⋯</button>
+                  <ul class="action-menu" aria-label="Row actions">
+                    <li><button type="button">View</button></li>
+                    <li><button type="button">Edit</button></li>
+                    <li><button type="button">Archive</button></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>Horse Racing Ireland</td>
+                <td>136</td>
+                <td>21</td>
+                <td>€88,950</td>
+                <td>€84,400</td>
+                <td><span class="status-badge">live</span></td>
+                <td>
+                  <button class="action-trigger" type="button" aria-label="Open action menu">⋯</button>
+                  <ul class="action-menu" aria-label="Row actions">
+                    <li><button type="button">View</button></li>
+                    <li><button type="button">Edit</button></li>
+                    <li><button type="button">Archive</button></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>Horse Racing Ireland</td>
+                <td>74</td>
+                <td>9</td>
+                <td>€49,200</td>
+                <td>€45,390</td>
+                <td><span class="status-badge">live</span></td>
+                <td>
+                  <button class="action-trigger" type="button" aria-label="Open action menu">⋯</button>
+                  <ul class="action-menu" aria-label="Row actions">
+                    <li><button type="button">View</button></li>
+                    <li><button type="button">Edit</button></li>
+                    <li><button type="button">Archive</button></li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>Horse Racing Ireland</td>
+                <td>109</td>
+                <td>16</td>
+                <td>€79,200</td>
+                <td>€72,100</td>
+                <td><span class="status-badge">live</span></td>
+                <td>
+                  <button class="action-trigger" type="button" aria-label="Open action menu">⋯</button>
+                  <ul class="action-menu" aria-label="Row actions">
+                    <li><button type="button">View</button></li>
+                    <li><button type="button">Edit</button></li>
+                    <li><button type="button">Archive</button></li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-    </section>
+      </section>
 
-
-    <!--Services section Code-->
-
-    <section class="services" id="services">
-        <h2 class="heading">My <span> Services</span></h2>
-
-        <div class="services-container">
-            <div class="services-box">
-                <i class="bx bx-palette"></i>
-                <h3>UI/UX Design</h3>
-                <p>"I specialize in crafting intuitive user interfaces and seamless user experiences. My services include user research, wireframing, prototyping, UI/UX design, and usability testing. Whether it's creating designs from scratch or improving existing ones, I focus on user-first design principles to bring ideas to life. Let's collaborate to build impactful digital experiences!"</p>
-                <a href="#" class="btn">Read more</a>
-            </div>
-
-            <div class="services-box">
-                <i class="bx bx-code"></i>
-                <h3>Web Developer</h3>
-                <p>"I provide end-to-end web development services, from building responsive and dynamic websites to improving existing ones. Whether it's creating custom designs with HTML, CSS, and JavaScript, or integrating advanced features, I focus on delivering tailored solutions that meet your needs. Let’s build your online presence together!"</p>
-                <a href="#" class="btn">Read more</a>
-           
-            </div>
-            <div class="services-box">
-                <i class="bx bxl-android"></i>
-                <h3>App Developer</h3>
-                <p>"I specialize in creating user-friendly, high-performance mobile and web applications tailored to your needs. From idea to launch, I handle app development with a focus on seamless functionality, responsive design, and intuitive user experiences. Let’s build the next great app together!"</p>
-                <a href="#" class="btn">Read more</a>
-           
+      <footer class="status-footer">
+        <p><span class="ready-dot" aria-hidden="true"></span>System Ready</p>
+        <div class="footer-links">
+          <a href="#">Clear Cache</a>
+          <a href="#">Help Center</a>
         </div>
-    </section>
+      </footer>
+    </main>
+  </div>
 
-    <!--Testimonials section code-->
-
-     <section class="testimonial" id="testimonial">
-
-        <div class="testimonial-box">
-            <h2 class="heading">Testimonials</h2>
-
-            <div class="wrapper">
-                <div class="testimonial-item">
-                    <img src="Assets/images/test4.jpg" alt="">
-
-                    <h2>Mina</h2>
-                    <div class ="rating">
-                        <i class="bx bxs-star" id="star"></i>
-                        <i class="bx bxs-star" id="star"></i>
-                        <i class="bx bxs-star" id="star"></i>
-                        <i class="bx bxs-star" id="star"></i>
-                        <i class="bx bxs-star" id="star"></i>
-                    </div>
-                    <p>"With your skill and dedication, our app turned out amazing—easy to use and visually stunning!"</p>
-                </div>
-                
-                <div class="testimonial-item">
-                    <img src="Assets/images/test1.jpg" alt="">
-
-                    <h2>Manjita</h2>
-                    <div class ="rating">
-                        <i class="bx bxs-star" id="star"></i>
-                        <i class="bx bxs-star" id="star"></i>
-                        <i class="bx bxs-star" id="star"></i>
-                        <i class="bx bxs-star" id="star"></i>
-                        <i class="bx bxs-star" id="star"></i>
-                    </div>
-                    <p>"The project was delivered flawlessly, and our website now runs seamlessly thanks to your work."</p>
-                </div>
-
-                <div class="testimonial-item">
-                    <img src="Assets/images/test2.jpg" alt="">
-
-                    <h2>Rojina</h2>
-                    <div class ="rating">
-                        <i class="bx bxs-star" id="star"></i>
-                        <i class="bx bxs-star" id="star"></i>
-                        <i class="bx bxs-star" id="star"></i>
-                        <i class="bx bxs-star" id="star"></i>
-                        <i class="bx bxs-star" id="star"></i>
-                    </div>
-                    <p>"Thanks to your expertise, our website looks stunning and functions perfectly!"</p>
-                </div>
-            </div>
-        </div>
-        
-     </section>
-
-     <!-- contact and footer section-->
-
-     <section class="contact" id="contact">
-        <h2  class="heading"> Contact <span>Me</span></h2>
-
-       <form action="#">
-        <div class="input-box">
-            <input type="text" placeholder="Full Name">
-            <input type="email" name="Email" placeholder="Email Address">
-        </div>
-        <div class="input-box">
-            <input type="Number" placeholder="phone Number">
-            <input type="text" placeholder="Email subject">
-        </div>
-        <textarea name="message" id="" cols="30" rows="10" placeholder="your message"></textarea>
-        <input type="submit" value="send message" class="btn">
-        </form>
-     </section>
-
-     <!--Footer section code-->
-
-     <footer class="footer">
-        <div class="social">
-            <a href="#"><i class='bx bxl-linkedin'></i> </a>
-            <a href="#"><i class='bx bxl-github'></i> </a>
-            <a href="#"><i class='bx bxl-facebook-circle'></i> </a>
-            <a href="#"><i class='bx bxl-instagram-alt' ></i> </a>
-        </div>
-        <p class="copyright">
-            &copy;SUPRIYANKA BUDHATHOKI - All Rights reserved.
-        </p>
-
-     </footer>
-     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
