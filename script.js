@@ -2,6 +2,7 @@ const sidebar = document.getElementById('sidebar');
 const sidebarToggle = document.getElementById('sidebarToggle');
 const filterBtn = document.getElementById('filterBtn');
 const searchInput = document.getElementById('searchInput');
+const systemStatus = document.getElementById('systemStatus');
 const actionButtons = document.querySelectorAll('.action-trigger');
 
 sidebarToggle?.addEventListener('click', () => {
@@ -10,10 +11,16 @@ sidebarToggle?.addEventListener('click', () => {
 
 filterBtn?.addEventListener('click', () => {
   const query = searchInput?.value?.trim() || '';
-  const message = query
-    ? `Filter applied for: ${query}`
-    : 'Filter applied: showing all organizations';
-  window.alert(message);
+  if (systemStatus) {
+    const dot = systemStatus.querySelector('.ready-dot');
+    const message = query
+      ? `Filter applied: ${query}`
+      : 'Filter applied: showing all organizations';
+    systemStatus.textContent = message;
+    if (dot) {
+      systemStatus.prepend(dot);
+    }
+  }
 });
 
 actionButtons.forEach((button) => {
