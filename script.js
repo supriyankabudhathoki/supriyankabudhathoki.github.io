@@ -1,19 +1,43 @@
-let  menu=document.querySelector('#menu-icon');
-let navbar=document.querySelector('.navbar');
+const sidebar = document.getElementById('sidebar');
+const sidebarToggle = document.getElementById('sidebarToggle');
+const filterBtn = document.getElementById('filterBtn');
+const searchInput = document.getElementById('searchInput');
+const systemStatus = document.getElementById('systemStatus');
+const actionButtons = document.querySelectorAll('.action-trigger');
 
-menu.onclick= () =>{
-    menu.classList.toggle('bx-x');
-    navbar.classList.toggle('active');
-}
+sidebarToggle?.addEventListener('click', () => {
+  sidebar?.classList.toggle('open');
+});
 
-window.onscroll= () => {
-    menu.classList.remove('bx-x');
-    navbar.classList.remove('active');
-}
-const typed = new Typed('.multiple-text', {
-    strings: ['Student','Frontend developer', 'Backend developer','Web designer'],
-    typeSpeed: 80,
-    backSpeed:80,
-    backDelay:1200,
-    loop:true,
+filterBtn?.addEventListener('click', () => {
+  const query = searchInput?.value?.trim() || '';
+  if (systemStatus) {
+    const dot = systemStatus.querySelector('.ready-dot');
+    const message = query
+      ? `Filter applied: ${query}`
+      : 'Filter applied: showing all organizations';
+    systemStatus.textContent = message;
+    if (dot) {
+      systemStatus.prepend(dot);
+    }
+  }
+});
+
+actionButtons.forEach((button) => {
+  button.addEventListener('click', (event) => {
+    event.stopPropagation();
+    const menu = button.nextElementSibling;
+    document.querySelectorAll('.action-menu.open').forEach((openMenu) => {
+      if (openMenu !== menu) {
+        openMenu.classList.remove('open');
+      }
+    });
+    menu?.classList.toggle('open');
+  });
+});
+
+document.addEventListener('click', () => {
+  document.querySelectorAll('.action-menu.open').forEach((menu) => {
+    menu.classList.remove('open');
+  });
 });
